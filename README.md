@@ -5,70 +5,69 @@
 
 # Quickcards
 
-App de escritorio para aprender vocabulario en francés. Escribes una palabra
-mientras estudias, se traduce sola al español y se guarda como tarjeta; luego
-la repasas en modo flashcard, sin que se te repita ninguna palabra hasta que
-las hayas visto todas.
+Desktop app for learning French vocabulary. You type a word while
+studying, it gets automatically translated to Spanish and saved as a
+card; then you review it in flashcard mode, with no word repeating
+until you've seen them all.
 
 <!-- 🎥 Aquí va el GIF o enlace al vídeo de demo -->
 <!-- ![demo](docs/demo.gif) -->
 
-## Tecnologías usadas
+## Tech stack
 
 - **Python 3.11**
-- **CustomTkinter** — interfaz gráfica de escritorio
-- **SQLite** (`sqlite3`, incluido en Python) — persistencia de las tarjetas
-- **MyMemory API** — traducción automática francés → español
-- **wordfreq** — comprobación de que la palabra introducida es realmente
-  francesa antes de traducir (evita traducciones sin sentido si escribes
-  en otro idioma por error)
+- **CustomTkinter** — desktop graphical interface
+- **SQLite** (`sqlite3`, built into Python) — card persistence
+- **MyMemory API** — automatic French → Spanish translation
+- **wordfreq** — checks that the word you typed is actually French
+  before translating (avoids nonsense translations if you accidentally
+  type in another language)
 
-## Funcionalidades
+## Features
 
-- ✅ Traducción automática francés → español al guardar una palabra
-- ✅ Detección de palabras que no son francesas o mal escritas, antes de
-  gastar una llamada a la API
-- ✅ Aviso de fiabilidad baja en la traducción (por erratas dentro del francés)
-- ✅ No se guardan palabras duplicadas 
-- ✅ Modo Repaso con tarjetas aleatorias que no se repiten en la misma sesión
-- ✅ Botón de reinicio del repaso cuando has visto todas las tarjetas
-- ✅ Contador de cuántas veces se ha repasado cada palabra
-- ✅ Borrado de tarjetas individuales desde la propia tarjeta de repaso
-- ✅ Contador total de tarjetas guardadas
+- ✅ Automatic French → Spanish translation when saving a word
+- ✅ Detects words that aren't French or are misspelled, before
+  spending an API call
+- ✅ Low-confidence translation warning (for typos within French)
+- ✅ No duplicate words get saved
+- ✅ Review mode with random cards that don't repeat within the same session
+- ✅ Restart button once you've reviewed every card
+- ✅ Counter showing how many times each word has been reviewed
+- ✅ Delete individual cards right from the review card
+- ✅ Total saved-cards counter
 
-## Qué puede hacer el usuario
+## What the user can do
 
-1. **Modo Estudio**: escribe una palabra en francés y pulsa "Traducir y
-   guardar" (o Enter). La app la traduce y la añade a tu mazo de vocabulario.
-2. **Modo Repaso**: pulsa la tarjeta para voltearla y ver la traducción.
-   Usa "Siguiente tarjeta" para pasar a la siguiente palabra sin repetir
-   ninguna hasta agotar el mazo, y "Volver a empezar" para repasarlo todo
-   de nuevo.
-3. **Borrar una tarjeta**: pulsa el icono 🗑 sobre la tarjeta que estás
-   repasando para eliminarla del mazo.
+1. **Study mode**: type a French word and press "Translate and save"
+   (or Enter). The app translates it and adds it to your vocabulary deck.
+2. **Review mode**: click the card to flip it and see the translation.
+   Use "Next card" to move to the next word without repeating any until
+   the deck runs out, and "Start over" to review the whole deck again.
+3. **Delete a card**: click the 🗑 icon on the card you're reviewing to
+   remove it from the deck
 
-## Atajos de teclado
+## Keyboard shortcuts
 
-| Atajo   | Acción                                    |
-|---------|--------------------------------------------|
-| `Enter` | Traduce y guarda la palabra (en Estudio)   |
+| Shortcut | Action                                  |
+|----------|-------------------------------------------|
+| `Enter`  | Translates and saves the word (in Study mode) |
 
 
-## Cómo ejecutarlo
+## How to run it
 
 ```bash
-git clone https://github.com/tu-usuario/quickcards.git
+git clone https://github.com/your-username/quickcards.git
 cd quickcards
 pip install -r requirements.txt
 python main.py
 ```
 
-Requiere Python 3.10+ y conexión a internet (para la traducción automática).
+Requires Python 3.10+ and an internet connection (for automatic translation).
 
-## Vídeo / demo
+## Video / demo
 
 <!-- Sustituye esto por un enlace a un vídeo corto (Loom, YouTube sin listar,
      o un GIF subido a la carpeta docs/) enseñando la app en uso:
      escribir una palabra, ver que se traduce y guarda, y repasar tarjetas. -->
 
-🎥 *(pendiente de grabar)*
+🎥 *(recording pending)*
